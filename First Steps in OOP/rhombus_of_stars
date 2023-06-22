@@ -1,0 +1,22 @@
+def create_pattern(n, i):
+    print(' ' * (n - i), end="")
+    print(*['*'] * i)
+
+
+def upper_triangle(n):
+    for i in range(1, n + 1):
+        create_pattern(n, i)
+
+
+def bottom_triangle(n):
+    for i in range(n - 1, 0, -1):
+        create_pattern(n, i)
+
+
+def print_rhombus(n):
+    upper_triangle(n)
+    bottom_triangle(n)
+
+
+number = int(input())
+print_rhombus(number)
